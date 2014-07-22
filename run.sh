@@ -15,6 +15,7 @@ mkdir -p ${DATADIR}
 #
 #set -x
 #docker.io run --name="${BTSYNC_IMAGE}" \
+#	--rm \
 #	-p 8888:8888 \
 #	-v $DATADIR:$DATADIR \
 #	-p 55555:55555 \
