@@ -12,20 +12,21 @@ mkdir -p ${DATADIR}
 #
 # btsync --config /btsync/btsync.conf --nodaemon
 
+#
+#set -x
+#docker.io run --name="${BTSYNC_IMAGE}" \
+#	-p 8888:8888 \
 #	-v $DATADIR:$DATADIR \
-set -x
-docker.io run --name="${BTSYNC_IMAGE}" \
-	-p 8888:8888 \
-	-p 55555:55555 \
-	--entrypoint=/bin/bash \
-	-i -t AIFDR/${BTSYNC_IMAGE} -i
+#	-p 55555:55555 \
+#	--entrypoint=/bin/bash \
+#	-i -t AIFDR/${BTSYNC_IMAGE} -i
 
 # Once testing is done comment the above and use
 # this one rather.
-#docker.io run --name="${BTSYNC_IMAGE}" \
-#	-v $WEBDIR:/var/www \
-#	-p 8888:8888 \
-#	-p 55555:55555 \
-#	-d -t AIFDR/${BTSYNC_IMAGE}
+docker.io run --name="${BTSYNC_IMAGE}" \
+	-v $DATADIR:$DATADIR \
+	-p 8888:8888 \
+	-p 55555:55555 \
+	-d -t AIFDR/${BTSYNC_IMAGE}
 
 
