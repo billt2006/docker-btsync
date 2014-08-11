@@ -1,7 +1,7 @@
 BitTorrent Sync Dockerfile
 ==========================
 
-This will build a [docker](http://www.docker.io/) image that runs [BitTorrent Sync](http://labs.bittorrent.com/experiments/sync.html).
+This will build a [docker](http://www.docker/) image that runs [BitTorrent Sync](http://labs.bittorrent.com/experiments/sync.html).
 
 
 ### Building the Image ###
