@@ -6,7 +6,7 @@ FROM ubuntu:14.04
 MAINTAINER Bill Thornton <billt2006@gmail.com>
 
 # Download and extract the executable to /usr/bin
-ADD http://download-new.utorrent.com/endpoint/btsync/os/linux-x64/track/stable /usr/bin/btsync.tar.gz
+ADD https://download-cdn.getsync.com/stable/linux-x64/BitTorrent-Sync_x64.tar.gz /usr/bin/btsync.tar.gz
 RUN cd /usr/bin && tar -xzvf btsync.tar.gz && rm btsync.tar.gz
 
 # Web GUI
